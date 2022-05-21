@@ -3,6 +3,8 @@
 import pygame
 from pygame import mixer # for sound effects
 
+from grids import draw_grid
+
 pygame.init()
 # initialize all imported pygame modules
 
@@ -12,7 +14,7 @@ HEIGHT = 800
 
 black = ( 0, 0, 0 )
 white = ( 255, 255, 255 )
-gray = ( 128, 128, 128 )
+sidemenu = ( 204, 255, 255 )
 # set colors for screen
 
 screen = pygame.display.set_mode([WIDTH, HEIGHT])
@@ -28,6 +30,7 @@ run = True
 while run:
     clock.tick(fps)
     screen.fill(black)
+    draw_grid(screen, sidemenu)
 
     # Event Handler
     for event in pygame.event.get():
