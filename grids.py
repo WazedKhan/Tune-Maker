@@ -24,9 +24,17 @@ def draw_grid(screen, color):
     kick_text = label_font.render('Kick', True, white)
     screen.blit(kick_text, (30, 230))
 
-    snare_text = label_font.render('Snare', True, white)
-    screen.blit(snare_text, (30, 130))
+    base_drum = label_font.render('Base Drum', True, white)
+    screen.blit(base_drum, (30, 330))
 
-    snare_text = label_font.render('Snare', True, white)
-    screen.blit(snare_text, (30, 130))
+    crash = label_font.render('Crash', True, white)
+    screen.blit(crash, (30, 430))
 
+    clap = label_font.render('Clap', True, white)
+    screen.blit(clap, (30, 530))
+
+    floor_tom = label_font.render('Floor Tom', True, white)
+    screen.blit(floor_tom, (30, 630))
+
+    for i in range(6):
+        pygame.draw.line(screen, gray, (0, (i*100)+100), (200, (i*100)+100),5)
