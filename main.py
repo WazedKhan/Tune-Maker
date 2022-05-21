@@ -1,6 +1,5 @@
 # Making a drum machine using pygame
 
-from time import time
 import pygame
 from pygame import mixer # for sound effects
 
@@ -16,8 +15,10 @@ white = ( 255, 255, 255 )
 gray = ( 128, 128, 128 )
 # set colors for screen
 
-screen = pygame.display.set_mode([WIDTH, HEIGHT]) # Initialize a window or screen of (1400x14000) for display
-pygame.display.set_caption('Py Drum') # sets caption of the window
+screen = pygame.display.set_mode([WIDTH, HEIGHT])
+# Initialize a window or screen of (1400x800) for display
+pygame.display.set_caption('Py Drum')
+# sets caption of the window
 
 fps = 60
 clock = pygame.time.Clock()
@@ -35,6 +36,6 @@ while run:
 
 
     pygame.display.flip()
-    # It allows only a portion of the screen to updated, instead of the entire area. If no argument is passed it updates the entire Surface area like pygame.
+    # It allows only a portion of the screen to updated, instead of the entire area.
+    # if no argument is passed it updates the entire Surface area like pygame.
 pygame.quit()
-
